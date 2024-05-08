@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Esquema de solicitud de pago con tarjeta de crédito",
+    "type": "object",
+    "properties": {
+      "card_number": {
+        "type": "string",
+        "pattern": "^[0-9]{16}$"
+      },
+      "cvv": {
+        "type": "string",
+        "pattern": "^[0-9]{3}$"
+      },
+      "expiration_date": {
+        "type": "string",
+        "format": "date"
+      }
+    },
+    "required": ["card_number", "cvv", "expiration_date"]
+  }
